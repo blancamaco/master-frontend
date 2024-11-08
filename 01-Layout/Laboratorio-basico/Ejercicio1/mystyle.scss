@@ -1,0 +1,84 @@
+body {
+  background-color: white;
+}
+
+
+$base-color-1: red; 
+$base-color-2: blue;
+$base-color-3: green;
+
+@mixin darken-effect($color) {
+  $i: 1;
+  @while $i <= 4 {
+    .darken-#{$i}{
+      background-color: darken($color, $i*10%);
+    }
+    $i: $i + 1;
+  }
+}
+
+@mixin lighten-effect($color) {
+  $i: 1;
+  @while $i <= 4 {
+    .lighten-#{$i}{
+      background-color: lighten($color, $i*10%);
+    }
+    $i: $i + 1;
+  } 
+}
+
+
+.container {
+  display: inline-flex;
+  gap: 4px;
+}
+
+$i: 1;
+@while $i <= 3 {
+  .container-#{$i} {
+    @extend .container;
+  }
+  $i: $i + 1;
+}
+
+
+.box {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width:fit-content;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.container-1 { 
+  .base-color {
+    background-color: $base-color-1;
+  };
+  @include darken-effect($base-color-1);
+  @include lighten-effect($base-color-1);
+};
+
+
+
+
+/*
+@include darken-effect($base-color-2);
+@include lighten-effect($base-color-2);
+@include darken-effect($base-color-3);
+@include lighten-effect($base-color-3);
+*/
+
+
+
+
+
+/*
+
+@for $i from 1 to 3 {
+  $number: $i;
+  @include darken-effect($base-color-($number));
+  @include lighten-effect($base-color-($number));
+}
+
+*/
