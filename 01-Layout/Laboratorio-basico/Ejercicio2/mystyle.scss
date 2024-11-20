@@ -1,0 +1,27 @@
+@import 'theme1';
+//@import 'theme2';
+
+body {
+  background-color: white;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 40px;
+  font-family: Helvetica, sans-serif;
+}
+
+
+$base-color-1: #e97590; 
+$base-color-2: #6b8fe9;
+$base-color-3: #59b885;
+
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  border: 1px solid black;
+  border-color: black;
+}

@@ -1,0 +1,31 @@
+
+
+// crea los contenedores .darken y les aplica un color de texto blanco
+@mixin darken-effect($color) {
+    $i: 1;
+    @while $i <= 4 {
+      .darken-#{$i}{
+        background-color: darken($color, $i*5%);
+  
+        .color-box-text {
+          color: white;
+        }
+      }
+      $i: $i + 1;
+    }
+}
+  
+  // crea los contenedores .lighten y les aplica un color de texto negro
+@mixin lighten-effect($color) {
+    $i: 1;
+    @while $i <= 4 {
+        .lighten-#{$i}{
+            background-color: lighten($color, $i*5%);
+
+            .color-box-text {
+                color: black;
+             }
+        }
+        $i: $i + 1;
+    } 
+}

@@ -1,0 +1,27 @@
+.container {
+    border-radius: 4px;
+}
+
+.base {
+    background-color: rgb(225, 154, 154);
+}
+
+.important {
+    background-color: rgb(215, 73, 73);
+}
+
+.warning {
+    background-color: rgb(212, 3, 3);
+}
+
+.shadow {
+    box-shadow: -10px 10px 20px rgb(0, 0, 0);
+}
+
+.principal {
+    font-family: Arial, sans-serif
+}
+
+.secondary {
+    font-family: 'Times', serif;
+}

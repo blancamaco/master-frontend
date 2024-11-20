@@ -1,5 +1,11 @@
+@import 'mixins';
+
 body {
   background-color: white;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+  font-family: Helvetica, sans-serif;
 }
 
 
@@ -7,40 +13,11 @@ $base-color-1: #e97590;
 $base-color-2: #6b8fe9;
 $base-color-3: #59b885;
 
-@mixin darken-effect($color) {
-  $i: 1;
-  @while $i <= 4 {
-    .darken-#{$i}{
-      background-color: darken($color, $i*5%);
-
-      .color-box-text {
-        color: white;
-      }
-    }
-    $i: $i + 1;
-  }
-}
-
-@mixin lighten-effect($color) {
-  $i: 1;
-  @while $i <= 4 {
-    .lighten-#{$i}{
-      background-color: lighten($color, $i*5%);
-
-      .color-box-text {
-        color: black;
-      }
-    }
-    $i: $i + 1;
-  } 
-  
-}
 
 
 .container {
   display: inline-flex;
   gap: 4px;
-  margin: 2px;
 }
 
 // extiende a todos los containers las propiedades de container
@@ -56,7 +33,7 @@ $i: 1;
 .box {
   display: flex;
   align-items: center;
-  height: 50px;
+  height: 60px;
   width:fit-content;
   padding: 8px;
   border-radius: 4px;
@@ -93,9 +70,6 @@ $i: 1;
 @include darken-effect($base-color-3);
 @include lighten-effect($base-color-3);
 */
-
-
-
 
 
 /*
